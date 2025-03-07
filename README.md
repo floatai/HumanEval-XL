@@ -72,6 +72,11 @@ DatasetDict({
 
 ```
 
+If you have error in loading the data, please try force_redownload:
+```python
+dataset = load_dataset("floatai/HumanEval-XL", "python", download_mode="force_redownload")
+```
+
 ### Data Instances
 
 An example of a dataset instance (In python split with Chinese prompts - dataset["Chinese"][0]):
