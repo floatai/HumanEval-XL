@@ -1,6 +1,6 @@
 # [LREC-COLING 2024 | HumanEval-XL: An Execution-based Multilingual Code Generation Benchmark Across 23 Natural Languages and 12 Programming Languages](https://aclanthology.org/2024.lrec-main.735/)
 
-   <a href="https://huggingface.co/datasets/FloatAI/HumanEval-XL" target="_blank">
+   <a href="https://huggingface.co/datasets/floatai/HumanEval-XL" target="_blank">
       <img alt="Datasets" src="https://img.shields.io/badge/📚-Datasets-green" />
    </a>
   <a href="https://aclanthology.org/2024.lrec-main.735/" target="_blank">
@@ -15,8 +15,8 @@ This repository contains data and evaluation code for the paper "[HumanEval-XL: 
 
 
 ## 🔥 News
-* **26 February, 2024:** 🎉 We release the official codebase and data! [[GitHub](https://github.com/FloatAI/humaneval-xl/tree/main?tab=readme-ov-file#dataset),[
-🤗dataset](https://huggingface.co/datasets/FloatAI/HumanEval-XL)] 🔥
+* **26 February, 2024:** 🎉 We release the official codebase and data! [[GitHub](https://github.com/floatai/humaneval-xl/tree/main?tab=readme-ov-file#dataset),[
+🤗dataset](https://huggingface.co/datasets/floatai/HumanEval-XL)] 🔥
 * **19 February, 2024:** 🎉 Our work has been accepted to [LREC-COLING 2024](https://lrec-coling-2024.org/)! ✨
 
 ## 🌟 Overview
@@ -25,9 +25,9 @@ This repository contains data and evaluation code for the paper "[HumanEval-XL: 
   <img src="src/data_process.png">
 </div>
 
-Large language models (LLMs) have made significant progress in generating codes from textual prompts. However, existing benchmarks have mainly concentrated on translating English prompts to multilingual codes or have been constrained to very limited natural languages (NLs). These benchmarks have overlooked the vast landscape of massively multilingual NL to multilingual code, leaving a critical gap in the evaluation of multilingual LLMs. In response, we introduce HumanEval-XL, a massively multilingual code generation benchmark specifically crafted to address this deficiency. HumanEval-XL establishes connections between 23 NLs and 12 programming languages (PLs), and comprises of a collection of 22,080 prompts with an average of 8.33 test cases. By ensuring *parallel* data across multiple NLs and PLs, HumanEval-XL offers a comprehensive evaluation platform for multilingual LLMs, allowing the assessment of the understanding of different NLs. Our work serves as a pioneering step towards filling the void in evaluating NL generalization in the area of multilingual code generation. We make our evaluation code and data publicly available at [https://github.com/FloatAI/HumanEval-XL](https://github.com/FloatAI/HumanEval-XL).
+Large language models (LLMs) have made significant progress in generating codes from textual prompts. However, existing benchmarks have mainly concentrated on translating English prompts to multilingual codes or have been constrained to very limited natural languages (NLs). These benchmarks have overlooked the vast landscape of massively multilingual NL to multilingual code, leaving a critical gap in the evaluation of multilingual LLMs. In response, we introduce HumanEval-XL, a massively multilingual code generation benchmark specifically crafted to address this deficiency. HumanEval-XL establishes connections between 23 NLs and 12 programming languages (PLs), and comprises of a collection of 22,080 prompts with an average of 8.33 test cases. By ensuring *parallel* data across multiple NLs and PLs, HumanEval-XL offers a comprehensive evaluation platform for multilingual LLMs, allowing the assessment of the understanding of different NLs. Our work serves as a pioneering step towards filling the void in evaluating NL generalization in the area of multilingual code generation. We make our evaluation code and data publicly available at [https://github.com/floatai/HumanEval-XL](https://github.com/floatai/HumanEval-XL).
 
-<img width="70%" alt="image" src="https://github.com/FloatAI/humaneval-xl/assets/13767887/e5b7a96e-20a6-4f17-a380-13c8b5ffbc8a">
+<img width="70%" alt="image" src="https://github.com/floatai/humaneval-xl/assets/13767887/e5b7a96e-20a6-4f17-a380-13c8b5ffbc8a">
 
 
 ## Dataset
@@ -40,14 +40,14 @@ The data is stored in `data/program_language/natural_language/`. We have 80 para
 "python", "java", "javascript", "csharp", "go", "kotlin", "perl", "php", "ruby", "scala", "swift", "typescript"
 
 
-<img width="60%" alt="image" src="https://github.com/FloatAI/humaneval-xl/assets/13767887/37023fcd-4c7e-41bf-8323-c5fcb5ac36a4">
+<img width="60%" alt="image" src="https://github.com/floatai/humaneval-xl/assets/13767887/37023fcd-4c7e-41bf-8323-c5fcb5ac36a4">
 
 
 ### Usage with HuggingFace datasets🤗
-You can also use [🤗**HuggingFace datasets**](https://huggingface.co/datasets/FloatAI/HumanEval-XL) to load a specific dataset and language of our dataset!!!
+You can also use [🤗**HuggingFace datasets**](https://huggingface.co/datasets/floatai/HumanEval-XL) to load a specific dataset and language of our dataset!!!
 ```python
 from datasets import load_dataset
-dataset = load_dataset("FloatAI/HumanEval-XL", "python")
+dataset = load_dataset("floatai/HumanEval-XL", "python")
 DatasetDict({
     English: Dataset({
         features: ['task_id', 'language', 'prompt', 'description', 'test', 'entry_point', 'canonical_solution', 'natural_language'],
@@ -121,7 +121,7 @@ programming languages are used to speicify splits:
 
 Check out and install this repository:
 ```
-git clone git@github.com:FloatAI/humaneval-xl.git
+git clone git@github.com:floatai/humaneval-xl.git
 cd mxeval
 pip install -e mxeval
 ```
@@ -187,7 +187,7 @@ However, we recommend that you use the default values for the rest.
 ## Credits
 We adapted Amazon-science's mxeval package (https://github.com/amazon-science/mxeval) for the evaluation. We thank Amazon for their pioneering effort in this field including the release of the dataset and evaluation code.
 
-We also appreciate the open-source contributions on [`floatai/HumanEval-XL`](https://huggingface.co/datasets/FloatAI/humaneval-xl) dataset:
+We also appreciate the open-source contributions on [`floatai/HumanEval-XL`](https://huggingface.co/datasets/floatai/humaneval-xl) dataset:
 - [Neil77/HumanEval-XL](https://huggingface.co/datasets/iNeil77/HumanEval-XL)
 - vllm code evaluation: [iNeil77/vllm-code-harness](https://github.com/iNeil77/vllm-code-harness)
 
@@ -212,6 +212,6 @@ We also appreciate the open-source contributions on [`floatai/HumanEval-XL`](htt
     publisher = "ELRA and ICCL",
     url = "https://aclanthology.org/2024.lrec-main.735/",
     pages = "8383--8394",
-    abstract = "Large language models (LLMs) have made significant progress in generating codes from textual prompts. However, existing benchmarks have mainly concentrated on translating English prompts to multilingual codes or have been constrained to very limited natural languages (NLs). These benchmarks have overlooked the vast landscape of massively multilingual NL to multilingual code, leaving a critical gap in the evaluation of multilingual LLMs. In response, we introduce HumanEval-XL, a massively multilingual code generation benchmark specifically crafted to address this deficiency. HumanEval-XL establishes connections between 23 NLs and 12 programming languages (PLs), and comprises of a collection of 22,080 prompts with an average of 8.33 test cases. By ensuring parallel data across multiple NLs and PLs, HumanEval-XL offers a comprehensive evaluation platform for multilingual LLMs, allowing the assessment of the understanding of different NLs. Our work serves as a pioneering step towards filling the void in evaluating NL generalization in the area of multilingual code generation. We make our evaluation code and data publicly available at https://github.com/FloatAI/HumanEval-XL."
+    abstract = "Large language models (LLMs) have made significant progress in generating codes from textual prompts. However, existing benchmarks have mainly concentrated on translating English prompts to multilingual codes or have been constrained to very limited natural languages (NLs). These benchmarks have overlooked the vast landscape of massively multilingual NL to multilingual code, leaving a critical gap in the evaluation of multilingual LLMs. In response, we introduce HumanEval-XL, a massively multilingual code generation benchmark specifically crafted to address this deficiency. HumanEval-XL establishes connections between 23 NLs and 12 programming languages (PLs), and comprises of a collection of 22,080 prompts with an average of 8.33 test cases. By ensuring parallel data across multiple NLs and PLs, HumanEval-XL offers a comprehensive evaluation platform for multilingual LLMs, allowing the assessment of the understanding of different NLs. Our work serves as a pioneering step towards filling the void in evaluating NL generalization in the area of multilingual code generation. We make our evaluation code and data publicly available at https://github.com/floatai/HumanEval-XL."
 }
 ```
