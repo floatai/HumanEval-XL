@@ -187,6 +187,10 @@ However, we recommend that you use the default values for the rest.
 ## Credits
 We adapted Amazon-science's mxeval package (https://github.com/amazon-science/mxeval) for the evaluation. We thank Amazon for their pioneering effort in this field including the release of the dataset and evaluation code.
 
+We also appreciate the open-source contributions on [`floatai/HumanEval-XL`](https://huggingface.co/datasets/FloatAI/humaneval-xl) dataset:
+- [Neil77/HumanEval-XL](https://huggingface.co/datasets/iNeil77/HumanEval-XL)
+- vllm code evaluation: [iNeil77/vllm-code-harness](https://github.com/iNeil77/vllm-code-harness)
+
 ## Citation
 
 ```
